@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# Loop through non-hidden files in the current directory
+# Display contents of current directory, formatted as required
+
 for item in *; do
-  # Skip if it is not a file or directory
+  # Skip non-existing files (safety check)
   [ -e "$item" ] || continue
 
-  # Extract the part after the first dash
-  after_dash="${item#*-}"
-
-  # Only display if there was a dash in the name
+  # If the filename contains a dash, show the part after the first dash
   if [[ "$item" == *-* ]]; then
-    echo "$after_dash"
+    echo "${item#*-}"
+  else
+    # If no dash, show the name as-is
+    echo "$item"
   fi
 done
