@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #Displays 'Best School' and 'Hi' at 9th iteration
 count=1
 while [ $count -le 10 ]
