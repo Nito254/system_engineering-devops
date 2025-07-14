@@ -1,4 +1,5 @@
 #!/bin/bash
+#Displays 1-20 with diff at  4,9 and 17.
 num=1
 while [ $num -le 20 ]
 do

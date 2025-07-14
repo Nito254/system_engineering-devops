@@ -1,4 +1,6 @@
 #!/bin/bash
+#Loops from 1-10 displaying 'bad luck' at 4, 'good luck' at 8
+# and 'Best School' for the rem iterations
 count=1
 while [ $count -le 10 ]
 do
