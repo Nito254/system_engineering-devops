@@ -1,4 +1,4 @@
-#!/bin/bash
+
 # Function to handle SIGTERM
 trap 'echo "I am invincible!!!"' SIGTERM
 

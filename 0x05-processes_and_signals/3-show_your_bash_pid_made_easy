@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Loop through all numeric directories in /proc
 
 for pid in /proc/[0-9]*; do
