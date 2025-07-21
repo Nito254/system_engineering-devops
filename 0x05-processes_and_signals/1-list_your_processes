@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-#script to list all running processes across all users
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,cmd --forest
+#script to list all running processes
+#across all users
+ps -auxf

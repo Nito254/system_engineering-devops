@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Get the PID(s) of the 7-highlander script
-PID=$(pgrep -f 7-highlander)
+# Kills the 4-to_infinity_and_beyond process
 
-# Send SIGTERM to it
-[ -n "$PID" ] && kill -s SIGTERM $PID
+pkill -f 4-to_infinity_and_beyond 
