@@ -1,0 +1,18 @@
+#!/bin/bash
+# Loop through all numeric directories in /proc
+
+for pid in /proc/[0-9]*; do
+    pid_num=$(basename "$pid")
+    cmdline_file="$pid/cmdline"
+
+    # Check if the cmdline file is readable and not empty
+    if [[ -r "$cmdline_file" && -s "$cmdline_file" ]]; then
+        # Read and sanitize the command line (null bytes to spaces)
+        cmdline=$(tr '\0' ' ' < "$cmdline_file")
+
+        # Check if the command line contains "bash"
+        if [[ "$cmdline" == *bash* ]]; then
+            echo "$pid_num $cmdline"
+        fi
+    fi
+done
